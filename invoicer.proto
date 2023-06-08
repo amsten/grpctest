@@ -1,0 +1,22 @@
+syntax = "proto3"; // The messages will be encoded with this version
+option go_package = "github.com/amsten/grpctest/invoicer"; 
+
+message Amount {
+    int64 amount = 1; // Represented in the smallest unit of the currency
+    string currency = 2;
+}
+
+message CreateRequest {
+    Amount amount = 1;
+    string from = 2;
+    string to = 3;
+}
+
+message CreateResponse {
+    bytes pdf = 1;
+    bytes docx = 2;
+}
+
+service Invoicer {
+    rpc Create(CreateRequest) returns (CreateResponse);
+}
