@@ -13,9 +13,9 @@ type myInvoicerServer struct {
 	invoicer.UnimplementedInvoicerServer
 }
 
-func (s myInvoicerServer) Create(ctx context.Context, in *invoicer.CreateRequest) (*invoicer.CreateResponse, error) {
+func (s myInvoicerServer) Create(ctx context.Context, req *invoicer.CreateRequest) (*invoicer.CreateResponse, error) {
 	return &invoicer.CreateResponse{
-		Pdf:  []byte("Hello World"),
+		Pdf:  []byte(req.From),
 		Docx: []byte("Hello World from docx"),
 	}, nil
 }
