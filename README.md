@@ -1,6 +1,6 @@
 Video Tutorial: [Maximilien Andile's Comprehensive Guide](https://www.youtube.com/watch?v=gbrPMv_GuQY&t=722s)
 
-# Setting Up Your Environment
+# Setting Up Your Environment on Mac
 To begin, ensure your development environment is properly configured by installing the necessary dependencies:
 
 - Install the Protocol Buffers Compiler:
